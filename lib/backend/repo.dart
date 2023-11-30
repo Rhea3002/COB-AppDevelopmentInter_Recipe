@@ -1,10 +1,8 @@
 import 'dart:convert';
 
-
 import 'package:http/http.dart' as http;
 
 import '../Model/gptresponse.dart';
-
 
 abstract class HomePageRepository {
   Future<dynamic> askAI(String promptt);
@@ -18,7 +16,7 @@ class HomePageRepo extends HomePageRepository {
         Uri.parse('https://api.pawan.krd/v1/completions'),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer pk-hPWheLEdNNjBwmDyWfrvFIDRNkbdbLlpdWcaLsvCdhFzhJHS'
+          'Authorization': '{YOUR_API_KEY}'
         },
         body: jsonEncode(
           {

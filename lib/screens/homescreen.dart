@@ -25,10 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
   String? text;
 
   final url2 =
-      "https://api.edamam.com/search?q=biryani&app_id={YOUR_APP_ID}&app_key={YOUR_KEY}&from=0&to=100&calories=591-722&health=alcohol-free&health=pork-free&excluded=yogurt&excluded=greek+yogurt";
+      "https://api.edamam.com/search?q=biryani&app_id={YOUR_ID}&app_key={YOUR_KEY}&from=0&to=100&calories=591-722&health=alcohol-free&health=pork-free&excluded=yogurt&excluded=greek+yogurt";
 
   final url1 =
-      "https://api.edamam.com/search?q=bhaji&cuisineType=Indian&mealType=lunch&app_id={YOUR_APP_ID}&app_key={YOUR_KEY}&from=0&to=100&calories=591-722&health=alcohol-free&health=pork-free&excluded=yogurt&excluded=greek+yogurt";
+      "https://api.edamam.com/search?q=bhaji&cuisineType=Indian&mealType=lunch&app_id={YOUR_ID}&app_key={YOUR_KEY}&from=0&to=100&calories=591-722&health=alcohol-free&health=pork-free&excluded=yogurt&excluded=greek+yogurt";
 
   getAPIdata1() async {
     var response = await http.get(Uri.parse(url1));
@@ -208,9 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
           foregroundColor: Colors.white,
           onPressed: () {
             Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const GPT()));
+                context, MaterialPageRoute(builder: (context) => const GPT()));
           },
         ));
   }
@@ -272,8 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-              builder: (context) => WebPage(url: recipe.url)),
+          MaterialPageRoute(builder: (context) => WebPage(url: recipe.url)),
         );
       },
       child: Container(
@@ -334,8 +331,7 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-              builder: (context) => WebPage(url: recipe.url)),
+          MaterialPageRoute(builder: (context) => WebPage(url: recipe.url)),
         );
       },
       child: Container(
